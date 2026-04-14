@@ -74,3 +74,6 @@ class QuizGame:
     def show_quizzes(self):
         for i, quiz in enumerate(self.quizzes, 1):
             print(f"{i}. {quiz.question}")
+
+    def show_score(self):
+        print(f"최고 점수: {self.best_score}")
