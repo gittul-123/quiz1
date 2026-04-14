@@ -36,3 +36,22 @@ class QuizGame:
                 break
             else:
                 print("잘못된 입력!")
+    
+    def play_quiz(self):
+    score = 0
+
+    for quiz in self.quizzes:
+        quiz.display()
+        answer = int(input("정답: "))
+
+        if quiz.check_answer(answer):
+            print("정답!")
+            score += 1
+        else:
+            print("오답!")
+
+    print(f"점수: {score}/{len(self.quizzes)}")
+
+    if score > self.best_score:
+        self.best_score = score
+        print("최고 점수 갱신!")
