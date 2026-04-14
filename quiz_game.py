@@ -26,7 +26,7 @@ class QuizGame:
             if choice == "1":
                 self.play_quiz()
             elif choice == "2":
-                print("퀴즈 추가 (아직 미구현)")
+                self.add_quiz()
             elif choice == "3":
                 print("목록 (아직 미구현)")
             elif choice == "4":
@@ -56,4 +56,18 @@ class QuizGame:
             self.best_score = score
             print("최고 점수 갱신!")
 
+    def add_quiz(self):
+        question = input("문제: ")
+
+        choices = []
+        for i in range(4):
+            c = input(f"선택지 {i+1}: ")
+            choices.append(c)
+
+        answer = int(input("정답 번호: "))
+
+        new_quiz = Quiz(question, choices, answer)
+        self.quizzes.append(new_quiz)
+
+        print("추가 완료!")
     
