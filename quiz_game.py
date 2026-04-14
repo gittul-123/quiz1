@@ -28,7 +28,7 @@ class QuizGame:
             elif choice == "2":
                 self.add_quiz()
             elif choice == "3":
-                print("목록 (아직 미구현)")
+                self.show_quizzes()
             elif choice == "4":
                 print("점수 (아직 미구현)")
             elif choice == "5":
@@ -71,3 +71,6 @@ class QuizGame:
 
         print("추가 완료!")
     
+    def show_quizzes(self):
+        for i, quiz in enumerate(self.quizzes, 1):
+            print(f"{i}. {quiz.question}")
