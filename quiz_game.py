@@ -24,7 +24,7 @@ class QuizGame:
             choice = input("선택: ")
 
             if choice == "1":
-                print("퀴즈 풀기 (아직 미구현)")
+                self.play_quiz()
             elif choice == "2":
                 print("퀴즈 추가 (아직 미구현)")
             elif choice == "3":
