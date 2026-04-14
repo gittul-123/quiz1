@@ -1,5 +1,5 @@
-# quiz_game.py
-
+from quiz import Quiz
+import json
 class QuizGame:
     def __init__(self):
         self.quizzes = [
@@ -30,7 +30,7 @@ class QuizGame:
             elif choice == "3":
                 self.show_quizzes()
             elif choice == "4":
-                print("점수 (아직 미구현)")
+                self.save()
             elif choice == "5":
                 print("종료합니다.")
                 break
@@ -77,3 +77,35 @@ class QuizGame:
 
     def show_score(self):
         print(f"최고 점수: {self.best_score}")
+
+    def save(self):
+        data = {
+            "quizzes": [
+                {
+                    "question": q.question,
+                    "choices": q.choices,
+                    "answer": q.answer
+                }
+                for q in self.quizzes
+            ],
+            "best_score": self.best_score
+        }
+
+        with open("state.json", "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
+    
+    def save(self):
+        data = {
+            "quizzes": [
+                {
+                    "question": q.question,
+                    "choices": q.choices,
+                    "answer": q.answer
+                }
+                for q in self.quizzes
+            ],
+            "best_score": self.best_score
+        }
+
+        with open("state.json", "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=4)
