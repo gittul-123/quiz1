@@ -123,6 +123,19 @@ quiz-game/
 
 ## git log
 
+commit ac69414f5abab2bc0d06d46bbcf51c72704d7180 (HEAD -> master, origin/master, origin/HEAD)
+Author: 임효정 <beep_beep2643@c5r6s3.codyssey.kr>
+Date:   Fri Apr 24 13:44:03 2026 +0900
+
+    feat: git log 캡처 파일 업로드
+
+commit 1f1cfce05d22c681e83900829a3b48fc19dd8b14 (test)
+Author: 임효정 <beep_beep2643@c5r6s3.codyssey.kr>
+Date:   Fri Apr 24 13:33:47 2026 +0900
+
+    Feat: 선택 범위 이상 입력 시 오류 메시지 출력 기능 추가
+
+
 commit 29a8c531d4c82adacdcd293fea87d0dcb3f1f025 (HEAD -> master)
 Author: 임효정 <beep_beep2643@c5r4s4.codyssey.kr>
 Date:   Tue Apr 14 21:15:44 2026 +0900
@@ -206,6 +219,11 @@ Author: 임효정 <beep_beep2643@c5r4s4.codyssey.kr>
 Date:   Tue Apr 14 20:17:07 2026 +0900
 
     Initial Commit
+
+
+
+![log](pics/log.png)
+
 
 
 
